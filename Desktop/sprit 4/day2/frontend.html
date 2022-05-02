@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <style>
+        #container {
+            display: grid;
+            width: 85%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            text-align: center;
+            margin: auto;
+            gap: 23px;
+        }
+
+        #container>div {
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        #container>div>img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 3px;
+        }
+
+        p {
+            margin-top: 2px;
+            line-height: 25px;
+        }
+
+        p+img {
+            width: 70px;
+            height: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FrontEnd Page</h1>
+    <h1>Strategic Investors</h1>
+    <div id="container">
+    </div>
+</body>
+
+</html>
+<script>
+    var investerArr = JSON.parse(localStorage.getItem("investerData"))
+    console.log(investerArr)
+
+
+    investerArr.forEach(function (elem) {
+        var box = document.createElement("div")
+
+        var investor_avatar = document.createElement("img");
+        investor_avatar.setAttribute("src", elem.investerImg)
+
+        var investor_name = document.createElement("h3");
+        investor_name.innerText = elem.investerName;
+
+        var invertor_position = document.createElement("p");
+        invertor_position.innerText = elem.investerpost;
+
+        var investor_logo = document.createElement("img");
+        investor_logo.setAttribute("src", elem.investerlogo)
+
+        box.append(investor_avatar, investor_name, invertor_position, investor_logo);
+
+        document.querySelector("#container").append(box);
+    })
+
+</script>
