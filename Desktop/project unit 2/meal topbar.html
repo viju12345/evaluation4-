@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals topbar</title>
+    <style>
+        body {
+            margin: auto;
+
+        }
+
+        #box {
+            width: 100%;
+            height: auto;
+            background-color: rgb(226, 220, 220);
+
+        }
+
+        #container {
+            width: 70%;
+            margin: auto;
+            padding: 20px 30px 30px 30px;
+
+        }
+
+        #container>p {
+            font-size: 18px;
+        }
+
+        #green {
+            background-color: rgba(16, 232, 16, 0.945);
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            padding: 5px 10px 5px 10px;
+        }
+
+        #green:hover {
+            background-color: rgb(128, 245, 128);
+        }
+
+        #red {
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            padding: 5px 10px 5px 10px;
+        }
+
+        #red:hover {
+            background-color: rgb(239, 89, 89);
+        }
+
+        #headline {
+            display: flex;
+        }
+
+        #headline>h2+h2 {
+            color: rgb(138, 135, 135);
+            margin-left: 13px;
+        }
+
+        #select {
+            display: flex;
+            justify-content: space-evenly;
+            border-radius: 10px;
+        }
+
+        #opt {
+            border-radius: 5px;
+            padding: 5px 10px 5px 10px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+        <div id="container">
+            <div id="headline">
+                <h2>Meat-Free Deals </h2>
+                <h2> | Restaurants In Malaysia</h2>
+            </div>
+
+            <p>Browse delicious meat-free, vegetarian deals from top restaurants and cafes! Just click on "Get Free
+                Coupon"
+                to obtain instant discounts and dine at the restaurants. No upfront payment, booking or printing is
+                needed.
+                If you share it on social media, you'll even DOUBLE your discount!</p>
+            <p>Download our <a href="https://www.kindmeal.my/mobile.htm">mobile app</a> now to easily get coupons and
+                start dining in a few seconds.
+                Effortlessly save
+                lives,
+                health, environment and money now!</p>
+
+            <div id="select">
+                <input type="text" id="opt" placeholder="Search Shop or Deal Name">
+                <select name="" id="opt">
+                    <option value="">All Categories</option>
+                    <option value="">Pasta</option>
+                    <option value="">Burger</option>
+                    <option value="">Breakfast</option>
+                    <option value="">Salad</option>
+                    <option value="">Bakery</option>
+                    <option value="">Tea & Dessert</option>
+                    <option value="">Local Delights</option>
+                    <option value="">jop & Korean</option>
+                    <option value="">Chinese</option>
+                    <option value="">Indian</option>
+                    <option value="">Soup</option>
+                    <option value="">Cute</option>
+
+                </select>
+                <select name="" id="opt">
+                    <option value="">All location</option>
+                    <option value="">Klang Valley</option>
+                    <option value="">* Kuala Lumpur</option>
+                    <option value="">* Petaling Jaya</option>
+                    <option value="">* Ampang</option>
+                    <option value="">* Ara Damansara</option>
+                    <option value="">* Bangsar</option>
+                    <option value="">*Bangsar South</option>
+                    <option value="">* Bukit Bintag</option>
+                    <option value="">* bukit Damansara</option>
+                    <option value="">* Cheras</option>
+                    <option value="">* Dhamansara Heights</option>
+                    <option value="">* Dhamansara Utama</option>
+                    <option value="">* lpoh</option>
+                    <option value="">* Kelana Jaya</option>
+                    <option value="">* Kepong</option>
+                    <option value="">* Kalang</option>
+                    <option value="">* Kota Dhamansara</option>
+                    <option value="">* Mont Kiara</option>
+                    <option value="">* Mutiara Damansara</option>
+                    <option value="">* Old Klang Road</option>
+                    <option value="">* Puchong</option>
+                    <option value="">* Putrajaya</option>
+                    <option value="">* Sepang</option>
+                    <option value="">* Seri Kembangan</option>
+                    <option value="">* Shah Alam</option>
+                    <option value="">* Seri Petaling</option>
+                    <option value="">* Subang</option>
+                    <option value="">* Taman Desa</option>
+                    <option value=""></option>
+                    <option value="">Other state</option>
+                    <option value="">* Terenggunu</option>
+                    <option value="">* Perak</option>
+                </select>
+                <button id="red">Search Deals</button>
+                <button id="green">Browse Restaurants</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
