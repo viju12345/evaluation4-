@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #stform {
+            margin: auto;
+            padding-left: 30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 35%;
+            border-radius: 10px;
+        }
+
+        #stform>input {
+            width: 90%;
+            height: 40px;
+            color: gray;
+            border-radius: 8px;
+            border: 1px solid rgb(207, 206, 206);
+            margin-bottom: 30px;
+        }
+
+        #stform>p {
+            margin-bottom: 3px;
+        }
+
+        #stform>p:nth-child(8) {
+            margin-bottom: 35px;
+            font-size: 18px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #add:hover {
+            background-color: darkgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <img src="https://sso.masaischool.com/brand_dark.svg" alt="">
+    </div>
+    <div>
+        <form id="stform">
+            <h2>Signup & login</h2>
+            <p>Email</p>
+            <input id="email" type="email" placeholder="Enter your email">
+            <p>Full Name</p>
+            <input id="name" type="text" placeholder="Enter your name">
+            <p>Password</p>
+            <input id="password" type="password" placeholder="Enter password">
+            <p>By signing up, I accept the Masai School <a href="https://masaischool.com/terms/">Terms of Service</a>
+                and acknowledge the
+                <a href="https://masaischool.com/privacy/">Privacy Policy</a>.
+            </p>
+            <input id="add" type="submit" placeholder="SIGN UP">
+            <h3>Already have an account?<a href="login.html">Sign In</a></h3>
+        </form>
+
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("#stform").addEventListener("submit", signfun)
+
+    var studentdata = JSON.parse(localStorage.getItem("appliedstudent")) || []
+    function signfun() {
+        event.preventDefault()
+
+        var student = {
+            signemail: stform.email.value,
+            signname: stform.name.value,
+            signpass: stform.password.value,
+        }
+        studentdata.push(student)
+        console.log(studentdata)
+        localStorage.setItem("appliedstudent", JSON.stringify(studentdata))
+
+    }
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #stform {
+            margin: auto;
+            padding-left: 30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 35%;
+            border-radius: 10px;
+        }
+
+        #stform>input {
+            width: 90%;
+            height: 40px;
+            color: gray;
+            border: 1px solid gray;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        #stform>p {
+            margin-bottom: 3px;
+        }
+
+        #stform>p:nth-child(8) {
+            margin-bottom: 35px;
+            font-size: 18px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #add:hover {
+            background-color: darkgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://sso.masaischool.com/brand_dark.svg" alt="">
+    </div>
+    <div>
+        <form id="stform">
+            <h2>login</h2>
+            <p>Email</p>
+            <input id="email" type="email" placeholder="Enter your email">
+            <p>Password</p>
+            <input id="password" type="password" placeholder="Enter password">
+
+            <input id="add" type="submit" placeholder="SIGN UP">
+
+        </form>
+
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("#stform").addEventListener("submit", stformfun)
+    if (detail == JSON.parse(localStorage.setItem("appliedstudent"))) {
+        console.log("login succesfully")
+    }
+    var studentdetail = [];
+    function stformfun() {
+        event.preventDefault()
+        studentemail: stform.email.value
+        studentpassword: stform.password.value
+    }
+    var detail = localStorage.getItem("appliedstudent", JSON.stringify(studentdetail))
+</script>
